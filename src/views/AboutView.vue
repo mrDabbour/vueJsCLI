@@ -1,20 +1,19 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <WelcomeMessage />
+    <h1>{{ pageName }}</h1>
+    <h2>{{ pageDescription }}</h2>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import WelcomeMessage from '@/components/WelcomeMessage.vue';
-
-
 export default {
-  name: 'HomeView',
-  components: {
-    WelcomeMessage
-  }
-}
+  data: function () {
+    return {
+      pageName: "About us",
+      pageDescription: "This is about us page",
+    };
+  },
+  name: "AboutView",
+  components: {},
+};
 </script>
-

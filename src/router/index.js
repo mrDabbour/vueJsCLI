@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import HelpView from "../views/HelpView.vue";
-
+import BlogView from "../views/BlogView.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -24,6 +24,11 @@ const routes = [
     path: "/help",
     name: "help",
     component: HelpView,
+  },
+  {
+    path: "/blog",
+    name: "blog",
+    component: BlogView,
   },
 ];
 
