@@ -7,7 +7,7 @@
 
 <script>
 // @ is an alias to /src
-import WelcomeMessage from '@/components/WelcomeMessage.vue'
+import WelcomeMessage from '@/components/WelcomeMessage.vue';
 
 
 export default {
