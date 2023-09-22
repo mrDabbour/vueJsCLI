@@ -3,6 +3,21 @@
     <h1>{{ pageName }}</h1>
     <h3>{{ pageDescription }}</h3>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="posts-area">
+            <BlogPosts></BlogPosts>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="sidebar">
+            <BlogSidebar></BlogSidebar>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- alert code  -->
     <div class="container">
       <div
@@ -26,6 +41,8 @@
 </template>
 
 <script>
+import BlogPosts from "@/components/Blog/BlogPosts.vue";
+import BlogSidebar from "@/components/Blog/BlogSidebar.vue";
 export default {
   data: function () {
     return {
@@ -40,6 +57,10 @@ export default {
     },
   },
   name: "blog-view",
+  components: {
+    BlogPosts,
+    BlogSidebar,
+  },
 };
 </script>
 

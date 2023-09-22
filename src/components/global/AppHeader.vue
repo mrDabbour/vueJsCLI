@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="logo">Mohammed Dabour Blog</div>
-    <ul>
+    <ul class="text-right">
       <router-link to="/" tag="li" exact><a>Home</a></router-link>
 
       <router-link to="/about" tag="li"><a>About</a></router-link>
