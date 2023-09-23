@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>{{ pageName }}</h1>
-    <h2>{{ pageDescription }}</h2>
+    <h2 v-bold>{{ pageDescription }}</h2>
   </div>
 </template>
 
