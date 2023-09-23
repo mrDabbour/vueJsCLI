@@ -7,7 +7,16 @@
       <div class="row">
         <div class="col-md-8">
           <div class="posts-area">
-            <BlogPosts></BlogPosts>
+            <BlogPosts
+              v-for="post in posts"
+              v-bind:key="post.id"
+              :views="post.views"
+              :content="post.content"
+              :title="post.title"
+              :category="post.category"
+              :date="post.date"
+              :author="post.author"
+            />
           </div>
         </div>
         <div class="col-md-4">
@@ -17,7 +26,6 @@
         </div>
       </div>
     </div>
-
     <!-- alert code  -->
     <div class="container">
       <div
@@ -43,12 +51,14 @@
 <script>
 import BlogPosts from "@/components/Blog/BlogPosts.vue";
 import BlogSidebar from "@/components/Blog/BlogSidebar.vue";
+import JsonPosts from "@/components/json/posts.json";
 export default {
   data: function () {
     return {
       pageName: "Blog",
       pageDescription: "This is blog page",
       showAlert: true,
+      posts: JsonPosts,
     };
   },
   methods: {
